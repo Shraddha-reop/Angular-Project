@@ -1,6 +1,7 @@
 <div class="form">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <h1>Compute Investment Value</h1><br><br>
+    
     <div class="form-field">
       <mat-form-field>
         <mat-label>
@@ -42,12 +43,14 @@
           <div *ngIf="f.scheme.errors.required">Scheme is required</div>
         </div>
       </mat-form-field><br><br>
-      <button mat-button>Calculate</button>
+      <button mat-button>Calculate</button> &nbsp;
+      <button mat-button (click) = "onReset()">Reset</button>&nbsp;
+      <button mat-button (click) = "getNav()">Get Data</button>
     </div>
-
   </form>
 </div>
 
-<div *ngIf="investment">
-  <h1> The Investment to date {{date}}</h1>
+<div class="finalCal" *ngIf="investment">
+  <h1> The Investment to date {{date}} is {{finalAmount}}</h1>
 </div>
+

@@ -1,15 +1,38 @@
 
     .form{
         text-align: center;
-        border: double 1px blue;
+        h1{
+            color: #006978;
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        button{
+            text-align: center;
+            margin-top: 2rem;
+        }
         .form-field{
+            margin-top: 1rem;
             width: 19rem;
             margin-left: 34rem;
             text-align: center;
-            border: solid 2px blue;
-            box-shadow: 10px 10px 10px 10px #888888;
-            height: 21rem;
+            border: solid 2px white;
+            box-shadow: 5px 5px 5px 5px #56c8d8;
+            height: 28rem;
             top:1rem
 
         }
+    }
+
+    .finalCal{
+        h1{
+            color: #006978;
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    ::ng-deep .mat-button, .mat-icon-button, .mat-stroked-button{
+        background: #006978 !important;
     }
