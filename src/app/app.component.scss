@@ -3,7 +3,7 @@
         text-align: center;
         h1{
             color: #006978;
-            font-size: 40px;
+            font-size: 16px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         button{
@@ -17,7 +17,22 @@
             text-align: center;
             border: solid 2px white;
             box-shadow: 5px 5px 5px 5px #56c8d8;
-            height: 28rem;
+            height: auto;
+            top:1rem
+           
+        }
+        .list{
+            display: flex;
+            float: left;;
+           }
+        .form-field-sub{
+            margin-top: 1rem;
+            width: 19rem;
+            margin-left: 34rem;
+            text-align: center;
+            border: solid 2px white;
+            box-shadow: 5px 5px 5px 5px #56c8d8;
+            height: auto;
             top:1rem
 
         }
