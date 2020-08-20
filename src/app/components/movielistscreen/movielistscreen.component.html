@@ -1,0 +1,18 @@
+
+<div *ngIf = "isMovie === 'false'">
+    <mdb-card *ngFor = "let cardList of cardLists" style="margin-top: 2rem;">
+      <app-tilegenerator [list] = "cardList.name" [id] = "cardList.id"></app-tilegenerator>
+      </mdb-card>
+</div>
+
+<div>
+   <div  *ngIf = "isMovie === 'true'">hiiiiiiiiiiiiiiiiii</div>
+</div>
+
+
+
+
+
+
+
+ 

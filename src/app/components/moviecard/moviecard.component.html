@@ -1,0 +1,19 @@
+<div *ngIf = "!isMovie">
+    <div  class="col-md-4" *ngFor="let card of slides; let cardIndex = index" style="display: flex; justify-content: space-between; float: left;">
+        <mdb-card class="my-1" style="width: 10rem;">
+          <mdb-card-body>
+            <mdb-card-title>
+              <h4>{{card.title}}</h4>
+            </mdb-card-title>
+            <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect (click) = "onClick(card.id)">See Details</a>
+          </mdb-card-body>
+        </mdb-card>
+      </div>
+  
+</div>
+   
+<!-- <div>
+    <app-movie  *ngIf = "isMovie"></app-movie>
+</div> -->
+
+

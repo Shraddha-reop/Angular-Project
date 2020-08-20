@@ -10,11 +10,25 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatSelectModule } from '@angular/material/select'
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MovielistscreenComponent } from './components/movielistscreen/movielistscreen.component';
+import { MoviedetailscreenComponent } from './components/moviedetailscreen/moviedetailscreen.component';
+import { TilegeneratorComponent } from './components/tilegenerator/tilegenerator.component';
+import { MoviecardComponent } from './components/moviecard/moviecard.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HighlightDirective,
+    MovielistscreenComponent,
+    MoviedetailscreenComponent,
+    TilegeneratorComponent,
+    MoviecardComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +41,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatSelectModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

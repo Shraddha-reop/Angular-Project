@@ -1,34 +1,4 @@
-<div class="form">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <h1>Create TODO List</h1><br><br>
-    <div class="form-field">
-      <h1>You Have {{length}} TODO'S</h1>
-      <div style="display: flex; justify-content: space-between;"  *ngFor = "let todo of toDoArray; let i = index;let l = length">
-        
-            <h2 style="color:#006978;font-size: 24px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">{{todo}}</h2>
-            <button mat-button  (click) = "onClear(i)"> X</button>
-      
-      </div>
-    </div>
-   
-    <div style="border: solid 2px white;
-    box-shadow: 5px 5px 5px 5px #56c8d8; display: flex; justify-content: space-between; width: fit-content;width: 304px;
-    margin-left: 34rem;
-    margin-top: 1rem;">
-      <mat-form-field>
-        <mat-label>
-          <h4>Write Task here</h4>
-        </mat-label>
-        <input matInput type="text" formControlName="toDoTask">
-        <div *ngIf="submitted && f.toDoTask.errors">
-          <div *ngIf="f.toDoTask.errors.required">Task is required</div>
-        </div>
-      </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
-      <button mat-button>Submit</button> &nbsp;
-    </div>
-  </form>
-</div>
+<app-movielistscreen></app-movielistscreen>
+<!-- <a [routerLink]="['movie-list-sceen']">Load Movies</a> -->
 
-
-
+<router-outlet></router-outlet>

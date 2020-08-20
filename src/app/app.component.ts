@@ -19,38 +19,17 @@ export class AppComponent  implements OnInit, OnDestroy{
   }
 
   ngOnInit() {
-
-    this.form = this.fb.group({
-      toDoTask: ['', Validators.required],
-     
-    })
+   localStorage.setItem('isMovie', 'false')
 
   }
   get f() { return this.form.controls; }
 
-  onClear(i){
-    console.log(i);
-    let toDoTask = JSON.parse(localStorage.getItem('toDoTask')) || [];
-    let arr = toDoTask.filter((data, index) => index !== i);
-    console.log(arr);
-    localStorage.setItem('toDoTask', JSON.stringify(arr));
-    this.toDoArray = JSON.parse(localStorage.getItem('toDoTask')) || [];
-    this.length = this.toDoArray.length;
-  }
+  
 
   onSubmit() {
-    this.submitted = true;
-    if (this.form.invalid) {
-      return;
-    }
-    let toDoTask = JSON.parse(localStorage.getItem('toDoTask')) || [];
-    toDoTask.push(this.form.value.toDoTask)
-    this.form.reset('');
-    localStorage.setItem('toDoTask', JSON.stringify(toDoTask));
-    this.toDoArray =  JSON.parse(localStorage.getItem('toDoTask')) || [];
-    this.length = this.toDoArray.length;
+   
     }
     ngOnDestroy(){
-      localStorage.clear();
+     
     }
 }

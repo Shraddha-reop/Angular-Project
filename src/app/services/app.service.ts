@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,13 +7,29 @@ import { HttpClient } from '@angular/common/http';
 export class AppService {
 
   constructor(private http: HttpClient) { }
-  storeNav(date, amount, scheme) {
-    console.log(date, amount, scheme, "ser");
-
-    return this.http.post<any>(`https://demo6335756.mockable.io/storeNav `, { date:date, amount:amount, scheme:scheme });
+  fetchGenre() {
+    return this.http.get<any>('https://api.themoviedb.org/3/genre/movie/list',{
+      params: {
+        api_key:"68e82445c8842ba8616d0f6bf0e97a41" 
+      }
+  });
   }
 
-  getSheme() {
-    return this.http.get<any>(``);
+  fetchMovie(genreiId) {
+    console.log(genreiId,"ser");
+    const movies = "movies"
+    return this.http.get<any>(`https://api.themoviedb.org/3/genre/${genreiId}/${movies}`, {
+      params: {
+        api_key:"68e82445c8842ba8616d0f6bf0e97a41" 
+      }}
+    );
+  }
+  fetchMovieDetail(movieId) {
+    return this.http.get<any>(`https://api.themoviedb.org/3/movie/${movieId}
+    `,{
+      params: {
+        api_key:"68e82445c8842ba8616d0f6bf0e97a41" 
+ 
+      }});
   }
 }
